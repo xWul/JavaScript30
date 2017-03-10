@@ -3,6 +3,10 @@ var dataControl = [];
 var textControl = 'Record';
 var counter = 0;
 
+setInterval(function(){ 
+    counter++;
+}, 10);
+
 
 function playSound(event) {
     const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
@@ -84,7 +88,3 @@ window.addEventListener('keydown', playSound);
 window.addEventListener('keydown', controller);
 document.querySelector('#controller').addEventListener('click', controller);
 
-
-setInterval(function(){ 
-    counter++;
-}, 10);
